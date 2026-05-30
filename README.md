@@ -1,5 +1,5 @@
-# Collection of [TimescaleDB](https://github.com/timescale/timescaledb) package
-**TimescaleDB - Time-series database for high-performance real-time analytics packaged as a Postgres extension**
+# [**TimescaleDB**](https://github.com/timescale/timescaledb) RE-package
+## **TimescaleDB - Time-series database for high-performance real-time analytics packaged as a Postgres extension**
 
 ## Notes and Installation Guide
 
