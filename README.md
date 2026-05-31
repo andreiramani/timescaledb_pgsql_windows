@@ -3,7 +3,7 @@
 
 ## Notes and Installation Guide
 
-I needed **TimescaleDB** for one of my projects while running **Windows 11 (25H2)** with **PostgreSQL v16.1**. Although the official TimescaleDB repository includes installation instructions for multiple operating systems (including Windows), those instructions did not work in my environment. The alternative options listed there are **Docker** or **building from source**.
+I needed **TimescaleDB** for one of my projects while running **Windows 11 (25H2)** with **PostgreSQL v16.1**. Although [Tiger Data](https://www.tigerdata.com/docs/get-started/choose-your-path/install-timescaledb) provides various installation instructions (including Windows), unfortunately the installer could not locate my `pg_config`.
 
 ### What I tried
 - I attempted to **compile TimescaleDB from the latest source**, but the latest source no longer supports my PostgreSQL version. The build failed with the following error:
@@ -25,16 +25,17 @@ From this error it is clear that the correct TimescaleDB version for a given Pos
    a. `*.dll` files goes to `<pgsql-folder>\lib` folder<br>
    b. `*.control` and `*.sql` files goes to `<pgsql-folder>\share\extension` folder.<br>
    c. `timescaledb-tune.exe` goes to `<pgsql-folder>\bin` folder.<br>
-5. From `<pgsql-folder>\bin` run `timescaledb-tune.exe` to optimize `postgresql.conf` settings.
+4. From `<pgsql-folder>\bin` run `timescaledb-tune.exe` to optimize `postgresql.conf` settings.
    (`postgresql.conf` location is in `<pgsql-folder>\data`)
-6. Start the PostgreSQL service.
-7. Connect to PostgreSQL and run:
+5. Start the PostgreSQL service.
+6. Connect to PostgreSQL and run:
    ```
    CREATE EXTENSION IF NOT EXISTS timescaledb;
    ```
-8. If the command returns `OK`, the TimescaleDB extension is installed successfully.
+7. If the command returns `OK`, the TimescaleDB extension is installed successfully.
    ![](img/01_create.jpg)
-
+   <br></br>
+8. Verify version: `SELECT extname, extversion FROM pg_extension WHERE extname = 'timescaledb';` 
 
 ### Troubleshooting
 - Choose the correct package: Always download the TimescaleDB package that exactly matches your PostgreSQL version and architecture.
