@@ -58,4 +58,4 @@ If you have a TimescaleDB binary package that is compatible with other PostgreSQ
 The official Windows instructions may fail for some local setups. When building from source, check `src/compat/compat.h` for supported PostgreSQL versions. For most users on Windows, the quickest path is to find a prebuilt TimescaleDB release that matches your PostgreSQL version.
 
 ***
-[![](https://api.star-history.com/chart?repos=andreiramani/timescaledb-windows&type=timeline&legend=top-left)](https://www.star-history.com/?repos=andreiramani%2Ftimescaledb-windows&type=timeline&legend=top-left)
+[![](https://api.star-history.com/chart?repos=andreiramani/timescaledb_pgsql_windows&type=timeline&legend=top-left)](https://www.star-history.com/?repos=andreiramani%2Ftimescaledb_pgsql_windows&type=timeline&legend=top-left)
